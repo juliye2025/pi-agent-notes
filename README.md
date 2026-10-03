@@ -8,7 +8,7 @@
 
 | 篇目 | 主题 | 正文 | 代码 |
 |---|---|---|---|
-| 00 | 技术序篇：Pi Harness 怎样让 Agent 跑起来 | [阅读正文](00_序篇/article.md) | 无（概念篇） |
+| 00 | 技术序篇：Pi Harness 怎样让 Agent 跑起来 | [阅读正文](00_序篇/00%20序篇｜Pi%20Harness%20怎样让%20Agent%20跑起来.pdf) | 无（概念篇） |
 | 01 | 看懂 Pi：选对开发层，跑通首个 Agent | [查看进度](01_看懂Pi/README.md) | 待补 |
 | 02 | 组装 Pi：Tool、Context 与输出合约 | [查看进度](02_组装Pi/README.md) | 待补 |
 | 03 | 组织 Pi：Router、Workers 与 Verifier | [查看进度](03_组织Pi/README.md) | 待补 |
