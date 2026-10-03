@@ -18,6 +18,8 @@
 
 如果你想找一个已经实现好的、可以直接写在简历上的、基于pi agent开发的自进化multi-agent项目，可以用我这个：
 
+
+
 ![基于 Pi Agent 的自进化 Multi-Agent 项目](assets/project.png)
 
 项目的详细介绍见：[微信公众号文章](https://mp.weixin.qq.com/s/1qmJ5PiShtf48fhM3LaGow)
