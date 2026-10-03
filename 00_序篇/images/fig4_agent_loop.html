@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+    background: #ffffff;
+    padding: 40px;
+    width: 1200px;
+  }
+  .outer {
+    border: 2.5px solid #2c3e50;
+    border-radius: 16px;
+    padding: 28px 32px 36px;
+    position: relative;
+  }
+  .outer-label {
+    position: absolute;
+    top: -14px; left: 24px;
+    background: #fff;
+    padding: 0 10px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #2c3e50;
+  }
+  .inner {
+    border: 2px dashed #16a085;
+    border-radius: 12px;
+    padding: 24px 24px 28px;
+    margin-top: 14px;
+    position: relative;
+    background: #f0faf7;
+  }
+  .inner-label {
+    position: absolute;
+    top: -12px; left: 20px;
+    background: #f0faf7;
+    padding: 0 8px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #16a085;
+  }
+  .row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    margin: 14px 0;
+  }
+  .node {
+    background: #ffffff;
+    border: 2px solid #2c3e50;
+    border-radius: 10px;
+    padding: 12px 20px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #2c3e50;
+    min-width: 150px;
+    text-align: center;
+  }
+  .node.model { background: #eaf2fb; border-color: #2980b9; }
+  .node.tool { background: #fef5e7; border-color: #e67e22; }
+  .node.queue { background: #f4ecf7; border-color: #8e44ad; border-style: dotted; }
+  .arrow {
+    font-size: 22px;
+    color: #7f8c8d;
+    font-weight: bold;
+  }
+  .loopback {
+    text-align: center;
+    margin-top: 6px;
+    font-size: 13px;
+    color: #16a085;
+    font-weight: 600;
+  }
+  .queues {
+    display: flex;
+    gap: 20px;
+    margin-top: 18px;
+    justify-content: center;
+  }
+  .queue-box {
+    border: 2px dotted #8e44ad;
+    border-radius: 10px;
+    padding: 10px 16px;
+    background: #faf5fc;
+    font-size: 13px;
+    color: #6c3483;
+    text-align: center;
+  }
+  .queue-box b { display: block; font-size: 14px; color: #5b2c6f; margin-bottom: 3px; }
+  .caption {
+    text-align: center;
+    margin-top: 22px;
+    font-size: 14px;
+    color: #555;
+  }
+</style>
+</head>
+<body>
+  <div class="outer">
+    <div class="outer-label">外层循环：一次 Agent Run</div>
+
+    <div class="inner">
+      <div class="inner-label">内层循环：每个 Turn</div>
+
+      <div class="row">
+        <div class="node">拼 Context</div>
+        <div class="arrow">→</div>
+        <div class="node model">调模型（流式）</div>
+        <div class="arrow">→</div>
+        <div class="node">模型要 Tool Call？</div>
+      </div>
+
+      <div class="row">
+        <div class="node tool">执行 Tool</div>
+        <div class="arrow">←</div>
+        <div style="font-size:13px;color:#e67e22;font-weight:600">是：执行后把结果塞回 messages</div>
+        <div class="arrow">|</div>
+        <div style="font-size:13px;color:#16a085;font-weight:600">否：内层退出</div>
+      </div>
+
+      <div class="loopback">↑ Tool Result 回到 Context，再调一次模型 ↑</div>
+    </div>
+
+    <div class="queues">
+      <div class="queue-box"><b>steering 消息</b>用户中途插话<br>下个 Turn 被接住</div>
+      <div class="queue-box"><b>follow-up 消息</b>这轮要结束时再看一眼<br>有后续任务就继续</div>
+    </div>
+  </div>
+
+  <div class="caption">Pi 的 Agent Loop：内层跑 Turn，外层管 Run，两个消息队列让"中途插话"和"后续任务"都不会丢</div>
+</body>
+</html>
