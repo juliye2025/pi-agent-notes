@@ -2,7 +2,7 @@
 
 选对开发层，跑通第一个 Agent。
 
-- [阅读正文](article.md)
+- [阅读正文](01%20看懂%20Pi：选对开发层，跑通第一个%20Agent.pdf)
 - [示例工程与运行说明](code/pi-minimal/README.md)
 - [完整运行脚本](code/pi-minimal/index.ts)
 - [DeepSeek 模型装配](code/pi-minimal/providers.ts)
