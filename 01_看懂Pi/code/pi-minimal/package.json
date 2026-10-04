@@ -1,0 +1,14 @@
+{
+  "name": "pi-notes-01-minimal",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=22.19.0" },
+  "scripts": {
+    "start": "node index.ts",
+    "check": "node --check index.ts && node --check providers.ts && node smoke.mjs"
+  },
+  "dependencies": {
+    "@earendil-works/pi-agent-core": "1.0.0",
+    "@earendil-works/pi-ai": "1.0.0"
+  }
+}
