@@ -1,0 +1,15 @@
+{
+  "name": "pi-notes-02-tool-agent",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=22.19.0" },
+  "scripts": {
+    "start": "node index.ts",
+    "test": "node --test checks.test.ts"
+  },
+  "dependencies": {
+    "@earendil-works/pi-agent-core": "1.0.0",
+    "@earendil-works/pi-ai": "1.0.0",
+    "typebox": "1.3.27"
+  }
+}

@@ -10,11 +10,11 @@
 |---|---|---|---|
 | 00 | 技术序篇：Pi Harness 怎样让 Agent 跑起来 | [阅读正文](00_序篇/00%20序篇｜Pi%20Harness%20怎样让%20Agent%20跑起来.pdf) | 无（概念篇） |
 | 01 | 看懂 Pi：选对开发层，跑通第一个 Agent | [阅读正文](01_看懂Pi/01%20看懂%20Pi：选对开发层，跑通第一个%20Agent.pdf) | [pi-minimal](01_看懂Pi/code/pi-minimal/README.md) |
-| 02 | 组装 Pi：Tool、Context 与输出合约 | [查看进度](02_组装Pi/README.md) | 待补 |
+| 02 | 组装 Pi：Tool、Context 与输出合约 | [阅读正文](02_组装Pi/02%20组装%20Pi：Tool、Context%20与输出合约.pdf) | [pi-tool-agent](02_组装Pi/code/pi-tool-agent/README.md) |
 | 03 | 组织 Pi：Router、Workers 与 Verifier | [查看进度](03_组织Pi/README.md) | 待补 |
 | 04 | 交付 Pi：从一次真实请求走到 Trace 与降级 | [查看进度](04_交付Pi/README.md) | 待补 |
 
-知识库链接：[飞书知识库](https://my.feishu.cn/wiki/UgRJwgfzhinKIUkjgH1ck6zTnYg?from=from_copylink)
+知识库链接：[飞书知识库](https://my.feishu.cn/wiki/REE6wlLe4iQoPKkzfGQcjY6znHb?from=from_copylink)
 
 如果你想找一个已经实现好的、可以直接写在简历上的、基于pi agent开发的自进化multi-agent项目，可以用我这个：
 
